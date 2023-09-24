@@ -19,33 +19,54 @@ LOGGER = get_logger(__name__)
 
 
 def run():
-    st.set_page_config(
-        page_title="Hello",
-        page_icon="👋",
-    )
+    st.write("# Welcome to Streamlit calculator! 👋")
 
-    st.write("# Welcome to Streamlit! 👋")
+    a=st.number_input("Enter number 1")
+    b=st.number_input("Enter number 2")
 
-    st.sidebar.success("Select a demo above.")
+    def add(num1,num2):
+      result= num1 + num2
+      return result
 
-    st.markdown(
-        """
-        Streamlit is an open-source app framework built specifically for
-        Machine Learning and Data Science projects.
-        **👈 Select a demo from the sidebar** to see some examples
-        of what Streamlit can do!
-        ### Want to learn more?
-        - Check out [streamlit.io](https://streamlit.io)
-        - Jump into our [documentation](https://docs.streamlit.io)
-        - Ask a question in our [community
-          forums](https://discuss.streamlit.io)
-        ### See more complex demos
-        - Use a neural net to [analyze the Udacity Self-driving Car Image
-          Dataset](https://github.com/streamlit/demo-self-driving)
-        - Explore a [New York City rideshare dataset](https://github.com/streamlit/demo-uber-nyc-pickups)
-    """
-    )
+    def sub(num1,num2):
+      result= num1 - num2
+      return result
 
+    def mul(num1,num2):
+      result= num1 * num2
+      return result
 
+    def div(num1,num2):
+        if num2 == 0:
+          return "cannot be 0"
+        else:
+          result= num1 / num2
+          return result
+
+    st.divider()
+    col1, col2, col3, col4 = st.columns(4)
+    with col1:
+      if st.button("\+"):
+          c=add(a,b)
+          st.write(c)
+
+    with col2:
+      if st.button("\-"):
+          c=sub(a,b)
+          st.write(c)
+
+    with col3:   
+      if st.button("\*"):
+          c=mul(a,b)
+          st.write(c)
+
+    with col4:
+      if st.button("/"):
+          c=div(a,b)
+          st.write
+
+    st.divider()
+  
+  
 if __name__ == "__main__":
     run()
