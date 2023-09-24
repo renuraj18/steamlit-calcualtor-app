@@ -71,6 +71,14 @@ def run():
 
     st.divider()
     
+    st.caption('Developed by Renuraj')
+    st.caption(':blue[renuraj18@gmail.com] :sunglasses:')
+
+    st.write("**Add your own comment:**")
+    form = st.form("comment")
+    name = form.text_input("Name")
+    comment = form.text_area("Comment")
+    submit = form.form_submit_button("Add comment")
   
 if __name__ == "__main__":
     run()
