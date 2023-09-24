@@ -17,6 +17,7 @@
 
 
 import streamlit as st
+import numpy as np
 from streamlit.logger import get_logger
 
 LOGGER = get_logger(__name__)
@@ -71,6 +72,22 @@ def run():
 
     st.divider()
     
+
+
+# Insert a chat message container.
+    with st.chat_message("user"):
+      st.write("Hello, Please leave a comment")
+# Display a chat input widget.
+    d=st.chat_input("Say something")
+    print(d)
+    st.caption('Developed by Renuraj')
+    st.caption(':blue[renuraj18@gmail.com] :sunglasses:')
+
+    st.write("**Add your own comment:**")
+    form = st.form("comment")
+    name = form.text_input("Name")
+    comment = form.text_area("Comment")
+    submit = form.form_submit_button("Add comment")
   
 if __name__ == "__main__":
     run()
