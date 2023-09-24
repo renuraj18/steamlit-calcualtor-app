@@ -4,4 +4,4 @@ This is the app you get when you run `streamlit run calculator`, extracted as it
 
 Edit [calculator.py](./calculator.py) to customize this app to your heart's desire. ❤️
 
-Check it out on [Streamlit Community Cloud](https://steamlit-calcualtor-app-kirg4qn0qn.streamlit.app/)
+Check it out on [Streamlit Community Cloud](https://steamlit-calcualtor-app-kbbgfhgyqxxfip6afy66gx.streamlit.app/)
