@@ -12,6 +12,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+
+# publlic url  https://steamlit-calcualtor-app-kirg4qn0qn.streamlit.app/
+
+
 import streamlit as st
 from streamlit.logger import get_logger
 
@@ -66,7 +70,7 @@ def run():
           st.write
 
     st.divider()
-  
+    
   
 if __name__ == "__main__":
     run()
