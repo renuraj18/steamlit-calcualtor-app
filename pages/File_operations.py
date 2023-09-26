@@ -11,3 +11,21 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+
+
+# publlic url  https://steamlit-calcualtor-app-kirg4qn0qn.streamlit.app/
+
+
+import streamlit as st
+import os
+
+from streamlit.logger import get_logger
+
+st.markdown("# test ❄️")
+st.sidebar.markdown("# test  ❄️")
+
+cwd=os.getcwd()
+files = os.listdir("pages/")
+for i in files:
+  st.write(i.strip(".py"))
+
